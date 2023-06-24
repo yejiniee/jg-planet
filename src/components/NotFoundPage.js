@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import styles from "./NotFoundPage.module.css";
+import styles from "../styles/NotFoundPage.module.css";
 
 class NotFound extends Component {
+  //링크없음 페이지
   render() {
     return (
       <div className={styles.div}>
