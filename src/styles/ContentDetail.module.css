@@ -1,3 +1,17 @@
+.divcontent {
+  display: inline-block;
+  top: 191px;
+  width: 87.5%;
+  left: 80px;
+}
+
+.divsidebar {
+  display: inline-block;
+  top: 184px;
+  left: 1086px;
+  width: 12.5%;
+}
+
 .b,
 .b1,
 .icon {
@@ -90,25 +104,15 @@
   height: 180px;
   font-size: var(--font-size-sm);
 }
-.imgBoxFillIcon,
-.imgBoxFillIcon1 {
-  position: absolute;
-  top: 363px;
-  left: 1129px;
-  width: 13px;
-  height: 14px;
-}
-.imgBoxFillIcon1 {
-  top: 541px;
-}
+
 .child,
 .icon1,
 .icon2,
 .icon3,
 .icon4 {
   position: absolute;
-  top: 429px;
-  left: 1106px;
+  top: 67px;
+  left: 20px;
   width: 74px;
   height: 49px;
 }
@@ -135,9 +139,10 @@
   right: 0;
   bottom: 0;
   left: 0;
-  border-radius: var(--br-8xs);
-  background-color: var(--color-white);
-  border: 3px solid var(--color-royalblue);
+
+  border-radius: 5px;
+  border: 3px solid #606cd6;
+  background: #fff;
   box-sizing: border-box;
 }
 .div6 {
@@ -155,13 +160,17 @@
   top: 486px;
   left: 833px;
   font-weight: 500;
-  color: var(--color-royalblue);
+
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 134px;
   height: 27px;
+
+  color: #606cd6;
+  font-size: 16px;
+  font-family: Noto Sans KR;
 }
 .div8 {
   top: 735px;
@@ -193,6 +202,9 @@
   border-radius: var(--br-8xs);
   border: 3px solid var(--color-gainsboro);
   box-sizing: border-box;
+
+  border-radius: 5px;
+  border: 3px solid #dbdbdb;
 }
 .div10,
 .div11,
@@ -203,6 +215,12 @@
   top: 4.37%;
   left: 14.04%;
   font-weight: 500;
+
+  color: #767676;
+  text-align: center;
+  font-size: 16px;
+  font-family: Noto Sans KR;
+  font-weight: 500;
 }
 .div10 {
   top: 184px;
@@ -211,12 +229,13 @@
   height: 412px;
   text-align: center;
 }
-.lineIcon {
+.line {
   position: absolute;
   top: 668px;
   left: 194px;
   width: 862px;
   height: 2px;
+  background: #dbdbdb;
 }
 .icon5 {
   top: 0;
@@ -380,9 +399,11 @@
   right: 0;
   bottom: 0;
   left: 0;
-  border-radius: var(--br-8xs);
-  background-color: var(--color-white);
-  border: 3px solid var(--color-blueviolet-100);
+
+  border-radius: 5px;
+  border: 3px solid #5d1fc2;
+  background: #fff;
+
   box-sizing: border-box;
 }
 .div17 {
@@ -395,7 +416,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  color: #5d1fc2;
+  text-align: center;
+  font-size: 16px;
+
+  font-family: Noto Sans KR;
+}
+
+.div177 {
+  position: absolute;
+  height: 50%;
+  width: 45.13%;
+  top: 25.93%;
+  left: 26.55%;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: #fff;
+  text-align: center;
+  font-size: 16px;
+
+  font-family: Noto Sans KR;
 }
 .property1default {
   position: absolute;
@@ -412,9 +456,9 @@
   right: 0;
   bottom: 0;
   left: 0;
-  border-radius: var(--br-8xs);
-  background-color: var(--color-blueviolet-100);
-  border: 3px solid var(--color-blueviolet-100);
+  border-radius: 5px;
+  border: 3px solid #5d1fc2;
+  background: #5d1fc2;
   box-sizing: border-box;
 }
 .property1default1,
@@ -442,29 +486,32 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--color-whitesmoke);
-  width: 1280px;
+  background-color: #ededed;
+  width: 100%;
   height: 128px;
 }
 .div19 {
   position: absolute;
   top: 95px;
   left: calc(50% - 465px);
+  color: #767676;
+  font-size: 12px;
+  font-family: Inter;
 }
 .span {
   color: var(--color-black);
 }
 .tel0222875114 {
-  font-size: var(--font-size-sm);
+  font-size: 14px;
 }
 .tel0222875114Container {
   position: absolute;
   bottom: 55px;
   left: calc(50% - 285px);
   font-weight: 500;
-  font-family: var(--font-noto-sans-kr);
-  font-size: var(--font-size-base);
-  color: var(--color-gray-200);
+  color: #191919;
+  font-size: 16px;
+  font-family: Noto Sans KR;
 }
 .rectangleParent {
   position: absolute;

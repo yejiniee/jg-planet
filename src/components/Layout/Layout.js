@@ -1,19 +1,22 @@
-import React, { Component } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import Content from "./Content";
+import styles from "../../styles/ContentDetail.module.css";
 
-class Layout extends Component {
-  //헤더, 푸터, 사이드바
-  render() {
-    return (
-      <div>
-        <Header></Header>
-        <Sidebar></Sidebar>
-        <Footer></Footer>
+const Layout = () => {
+  return (
+    <div>
+      <Header></Header>
+      <div className={styles.divcontent}>
+        <Content></Content>
       </div>
-    );
-  }
-}
+      <div className={styles.divsidebar}>
+        <Sidebar></Sidebar>
+      </div>
+      <Footer></Footer>
+    </div>
+  );
+};
 
 export default Layout;
