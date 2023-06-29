@@ -2,10 +2,14 @@ import styles from "../../styles/Sidebar.module.css";
 
 const Sidebar = () => {
   return (
-    <div className={styles.div10}>
-      <div className={styles.item}>
-        <div className={styles.div11}>최근 본 상품</div>
-        <img className={styles.icon} alt="" src="/1.svg" />
+    <div className={styles.div}>
+      <div className={styles.box}>
+        <div className={styles.title}>최근 본 상품</div>
+        <img
+          className={styles.item}
+          alt=""
+          src="../../assets/Img_box_fill.svg"
+        />
       </div>
     </div>
   );

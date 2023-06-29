@@ -8,7 +8,7 @@ const Header = () => {
         <img
           className={styles.planetIcon}
           alt=""
-          src="D:\joongoplanet\src\assets\Planet.svg"
+          src="../../assets/Planet.svg"
         />
       </div>
       <img
@@ -21,7 +21,7 @@ const Header = () => {
         alt=""
         src="/assets/user-cicrle-duotone.svg"
       />
-      <div className={styles.groupChild} />
+      <div className={styles.line} />
       <div className={styles.groupItem} />
       <img
         className={styles.searchAltIcon}

@@ -50,17 +50,18 @@
   left: 1078px;
 }
 
-.groupChild,
+.line,
 .groupItem {
   position: absolute;
   box-sizing: border-box;
 }
-.groupChild {
+.line {
   top: 15.5px;
   left: 1061.5px;
   border-right: 1px solid var(--color-gainsboro);
   width: 1px;
   height: 27px;
+  background: #dbdbdb;
 }
 .groupItem {
   width: 549px;
