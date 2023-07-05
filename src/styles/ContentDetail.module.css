@@ -73,7 +73,7 @@
 
   color: #767676;
   font-size: 16px;
-  font-family: Noto Sans KR;
+  font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -261,8 +261,9 @@
   background-color: var(--color-gray-300);
 }
 .div13 {
-  height: 56%;
-  width: 48%;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
   top: 16%;
   left: 24%;
   display: flex;
@@ -277,8 +278,9 @@
   height: 25px;
 }
 .div15 {
-  height: 56%;
-  width: 44%;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
   top: 16%;
   left: 20%;
   display: flex;
@@ -415,7 +417,7 @@
 
   color: #767676;
   font-size: 14px;
-  font-family: Noto Sans KR;
+  font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 500;
   line-height: normal;

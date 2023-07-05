@@ -3,7 +3,7 @@ import styles from "../styles/ContentDetail.module.css";
 const ContentDetail = () => {
   return (
     <div className={styles.div}>
-      <img className={styles.icon} alt="" src="/.svg" />
+      <img className={styles.icon} alt="" src="/img/빈 이미지.svg" />
       <div className={styles.parent}>
         <b className={styles.b}>어쩌구 저쩌구 신발</b>
         <b className={styles.b1}>140,000원</b>
@@ -25,14 +25,14 @@ const ContentDetail = () => {
       </div>
       <div className={styles.line}></div>
       <div className={styles.group}>
-        <img className={styles.icon5} alt="" src="/5.svg" />
+        <img className={styles.icon5} alt="" src="/img/빈 이미지.svg" />
         <div className={styles.div12}>
           <div className={styles.inner} />
-          <div className={styles.div13}>{`>`}</div>
+          <img className={styles.div13} alt="" src="/img/right-side.svg" />
         </div>
         <div className={styles.div14}>
           <div className={styles.inner} />
-          <div className={styles.div15}>{`<`}</div>
+          <img className={styles.div15} alt="" src="/img/left-side.svg" />
         </div>
       </div>
 
@@ -50,7 +50,11 @@ const ContentDetail = () => {
       <div className={styles.container}>
         <div className={styles.div20}>중고나라</div>
         <div className={styles.div21}>
-          <img className={styles.icon6} alt="" src="/--1@2x.png" />
+          <img
+            className={styles.icon6}
+            alt=""
+            src="/img/중고나라 아이콘 1.png"
+          />
         </div>
       </div>
     </div>

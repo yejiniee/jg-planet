@@ -1,6 +1,5 @@
 import "./App.css";
 import NotFoundPage from "./components/NotFoundPage";
-import ContentDetail from "./components/ContentDetail";
 import Layout from "./components/Layout/Layout";
 
 const App = () => {
