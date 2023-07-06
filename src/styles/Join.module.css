@@ -1,0 +1,40 @@
+
+
+.container{
+    align-items: center;
+    height: 230px;
+    width: 400px;
+    border: none;
+    background-color: rgba(236, 236, 236, 0.926);
+    padding: 20px;
+    margin: 200px;
+    z-index: -1;
+
+}
+
+.planet{
+    color : #5D1FC2;
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Noto Serif KR";
+}
+
+.h2 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.h3 {
+    font-size: 20px;
+}
+
+.cont {
+    font-size: 20px;
+    width: 300px;
+    padding : 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;    
+    background-color: white;
+}
