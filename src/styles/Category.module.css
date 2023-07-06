@@ -1,0 +1,99 @@
+.categorybox {
+    background-color: #ffffff;
+    border: 2px solid;
+    border-color: #ebeaea;
+    padding: 10px;
+    height: 70px;
+    position: relative;
+    width: 1120px;
+    border-radius: 3px;
+}
+
+.categorybox .categoryItem-0{
+    left: 28px !important;
+    position: absolute !important;
+    top: 14px !important;
+}
+
+.categorybox .categoryItem-1{
+    left: 135px !important;
+    position: absolute !important;
+    top: 14px !important
+}
+
+.categorybox .categoryItem-2{
+    left: 372px !important;
+    position: absolute !important;
+    top: 14px !important
+}
+.categorybox .categoryItem-3{
+    left: 503px !important;
+    position: absolute !important;
+    top: 14px !important
+}
+.categorybox .categoryItem-4{
+    left: 646px !important;
+    position: absolute !important;
+    top: 14px !important
+}
+.categorybox .categoryItem-5{
+    left: 243px !important;
+    position: absolute !important;
+    top: 14px !important
+}
+.categorybox .categoryItem-6{
+    left: 30px !important;
+    position: absolute !important;
+    top: 49px !important
+}
+.categorybox .categoryItem-7{
+    left: 170px !important;
+    position: absolute !important;
+    top: 49px !important
+}
+.categorybox .categoryItem-8{
+    left: 328px !important;
+    position: absolute !important;
+    top: 49px !important
+}
+.categorybox .categoryItem-9{
+    left: 474px !important;
+    position: absolute !important;
+    top: 49px !important
+}
+.categorybox .categoryItem-10{
+    left: 724px !important;
+    position: absolute !important;
+    top: 14px !important
+}
+.categorybox .categoryItem-11{
+    left: 868px !important;
+    position: absolute !important;
+    top: 14px !important
+}
+
+.categoryItem {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 19px;
+    position: relative;
+    width: fit-content;
+}
+  
+.categoryItem .checkbox {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #00000052;
+    height: 12px;
+    min-width: 12px;
+    position: relative;
+}
+
+
+.clabel {
+    top: 5px;
+    left: 5px;
+    font-family: "Inter", Helvetica;
+    font-size: 16px;
+}
