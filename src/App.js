@@ -26,7 +26,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Logout" element={<Logout />} />
         <Route path="/Join" element={<Join />} />
-        <Route path="/search/:search" element={<Searchbar/>} />
+        <Route path="/search/:search" element={<Searchbar />} />
       </Routes>
     </BrowserRouter>
   );
