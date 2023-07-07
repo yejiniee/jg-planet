@@ -1,7 +1,7 @@
 
 
 .container{
-    align-items: center;
+    text-align: center;
     height: 350px;
     width: 400px;
     border: none;
@@ -19,13 +19,6 @@
 
 }
 
-.planet{
-    color : #5D1FC2;
-    font-weight: 600;
-    text-align: center;
-    font-size: 25px;
-    font-family: "Noto Serif KR";
-}
 
 .h2 {
     font-weight: 400;

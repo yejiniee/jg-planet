@@ -83,6 +83,8 @@
   left: 317.42px;
   width: 21.94px;
   height: 21.94px;
+  border: none;
+  background-color: white;
 }
 .div16 {
   top: 21px;
@@ -107,4 +109,23 @@
   font-size: var(--font-size-5xl);
   color: var(--color-blueviolet-100);
   font-family: var(--font-notoseriftamilslanted);
+}
+
+.pannel{
+  position: relative;
+  top: 100px;
+  left: 80px;
+  width: 20000px;
+  height: 80px;
+
+  padding: 20px;
+}
+
+.prod{
+    width: 100px;
+    height: 10px;
+    font-size: 16px;
+    color: black;
+    border: 2px solid black;
+
 }

@@ -4,6 +4,10 @@ import Layout from "./components/Layout/Layout";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Content from "./components/Layout/Content";
 import ContentDetail from "./components/ContentDetail";
+import Login from "./components/Login";
+import Logout from "./components/Logout";
+import Join from "./components/Join";
+import Searchbar from "./components/Layout/Searchbar";
 
 function App() {
   //컴포넌트를 만드는 코드
@@ -19,6 +23,10 @@ function App() {
         </Route>
         {/* <NotFoundPage /> */}
         <Route path="/notfound" element={<NotFoundPage />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Logout" element={<Logout />} />
+        <Route path="/Join" element={<Join />} />
+        <Route path="/search/:search" element={<Searchbar/>} />
       </Routes>
     </BrowserRouter>
   );
