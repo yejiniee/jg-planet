@@ -1,4 +1,5 @@
 import styles from "../styles/ContentDetail.module.css";
+const url = "https://web.joongna.com/";
 
 const ContentDetail = () => {
   return (
@@ -14,10 +15,16 @@ const ContentDetail = () => {
         <div className={styles.div5}>찜 100+</div>
       </div>
 
-      <div className={styles.div6}>
+      <div
+        className={styles.div6}
+        onClick={() => {
+          window.open(url);
+        }}
+      >
         <div className={styles.child} />
+        <div className={styles.div7}>보러 가기</div>
       </div>
-      <div className={styles.div7}>보러 가기</div>
+
       <div className={styles.div8}>여기는 본문 긁어온 것...</div>
       <div className={styles.div9}>
         <p className={styles.p}>거래거래</p>
@@ -36,15 +43,13 @@ const ContentDetail = () => {
         </div>
       </div>
 
-      <div className={styles.state}>
-        <div className={styles.property1default}>
-          <div className={styles.property1defaultChild} />
-          <div className={styles.div17}>찜해제</div>
-        </div>
-        <div className={styles.property1default1}>
-          <div className={styles.property1defaultItem} />
-          <div className={styles.div177}>찜하기</div>
-        </div>
+      <div className={styles.btn_unheart}>
+        <div className={styles.btn_unheartChild} />
+        <div className={styles.div17}>찜해제</div>
+      </div>
+      <div className={styles.btn_heart}>
+        <div className={styles.btn_heartChild} />
+        <div className={styles.div177}>찜하기</div>
       </div>
 
       <div className={styles.container}>

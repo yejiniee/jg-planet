@@ -188,6 +188,7 @@
   left: 799px;
   width: 201px;
   height: 54px;
+  cursor: pointer;
 }
 .div6,
 .div7,
@@ -195,8 +196,8 @@
   position: absolute;
 }
 .div7 {
-  top: 486px;
-  left: 833px;
+  top: 14px;
+  left: 34px;
   font-weight: 500;
 
   text-align: center;
@@ -209,6 +210,7 @@
   color: #606cd6;
   font-size: 16px;
   font-family: Noto Sans KR;
+  cursor: pointer;
 }
 .div8 {
   top: 735px;
@@ -306,7 +308,7 @@
   font-family: var(--font-inter);
 }
 
-.property1defaultChild {
+.btn_unheartChild {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -356,14 +358,15 @@
 
   font-family: Noto Sans KR;
 }
-.property1default {
+.btn_unheart {
   position: absolute;
-  top: 93px;
-  left: 20px;
+  top: 472px;
+  left: 656px;
   width: 113px;
   height: 54px;
+  cursor: pointer;
 }
-.property1defaultItem {
+.btn_heartChild {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -376,14 +379,14 @@
   background: #5d1fc2;
   box-sizing: border-box;
 }
-.property1default1,
-.state {
+.btn_heart {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 472px;
+  left: 656px;
   width: 113px;
   height: 54px;
   color: var(--color-white);
+  cursor: pointer;
 }
 .state {
   top: 452px;
