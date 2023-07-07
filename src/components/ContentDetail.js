@@ -1,22 +1,23 @@
 import styles from "../styles/ContentDetail.module.css";
-const url = "https://web.joongna.com/";
+
+const url = "https://web.joongna.com/"; //상품의 원글 url
 
 const ContentDetail = () => {
   return (
     <div className={styles.div}>
       <img className={styles.icon} alt="" src="/img/빈 이미지.svg" />
       <div className={styles.parent}>
-        <b className={styles.b}>어쩌구 저쩌구 신발</b>
-        <b className={styles.b1}>140,000원</b>
-        <div className={styles.div1}>{`홈 > 여성의류 > 신발`}</div>
-        <div className={styles.div2}>바나나맛맛있어요</div>
-        <div className={styles.div3}>2023-02-25</div>
-        <div className={styles.div4}>조회 20000</div>
-        <div className={styles.div5}>찜 100+</div>
+        <b className={styles.title}>어쩌구 저쩌구 신발</b>
+        <b className={styles.price}>140,000원</b>
+        <div className={styles.category}>{`홈 > 여성의류 > 신발`}</div>
+        <div className={styles.name}>바나나맛맛있어요</div>
+        <div className={styles.date}>2023-02-25</div>
+        <div className={styles.views}>조회 20000</div>
+        <div className={styles.heart}>찜 100+</div>
       </div>
 
       <div
-        className={styles.div6}
+        className={styles.btn_golink}
         onClick={() => {
           window.open(url);
         }}

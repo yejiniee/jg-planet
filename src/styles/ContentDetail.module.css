@@ -12,8 +12,8 @@
   width: 12.5%;
 }
 
-.b,
-.b1,
+.title,
+.price,
 .icon {
   position: absolute;
 }
@@ -23,33 +23,33 @@
   width: 453px;
   height: 299px;
 }
-.b,
-.b1 {
+.title,
+.price {
   font-size: 24px;
   color: var(--color-gray-200);
   width: 312px;
 }
-.b {
+.title {
   top: 34px;
   left: 0;
   display: flex;
   align-items: center;
   height: 30px;
 }
-.b1 {
+.price {
   top: 149px;
   left: 1px;
   height: 31px;
 }
-.b1,
-.div1,
-.div2,
-.div3,
-.div4 {
+.price,
+.category,
+.name,
+.date,
+.views {
   display: flex;
   align-items: center;
 }
-.div1 {
+.category {
   position: absolute;
   top: 0;
   left: 1px;
@@ -58,12 +58,12 @@
   width: 408px;
   height: 22px;
 }
-.div2,
-.div3,
-.div4 {
+.name,
+.date,
+.views {
   height: 20px;
 }
-.div2 {
+.name {
   position: absolute;
   top: 76px;
   left: 1px;
@@ -78,11 +78,11 @@
   font-weight: 500;
   line-height: normal;
 }
-.div3,
-.div4 {
+.date,
+.views {
   top: 104px;
 }
-.div3 {
+.date {
   position: absolute;
   left: 1px;
   width: 80px;
@@ -97,7 +97,7 @@
   font-weight: 400;
   line-height: normal;
 }
-.div4 {
+.views {
   left: 93px;
   width: 75px;
 
@@ -112,12 +112,12 @@
   justify-content: center;
   flex-shrink: 0;
 }
-.div4,
-.div5,
+.views,
+.heart,
 .parent {
   position: absolute;
 }
-.div5 {
+.heart {
   top: 104px;
   left: 181px;
   display: flex;
@@ -183,14 +183,14 @@
   background: #fff;
   box-sizing: border-box;
 }
-.div6 {
+.btn_golink {
   top: 472px;
   left: 799px;
   width: 201px;
   height: 54px;
   cursor: pointer;
 }
-.div6,
+.btn_golink,
 .div7,
 .div8 {
   position: absolute;
