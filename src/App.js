@@ -15,7 +15,7 @@ function App() {
           {/* 메인페이지-아직이름몰라서대충넣어놓음 */}
           <Route path="/main" element={<ContentDetail />} />
           {/* 제품상세 페이지 */}
-          <Route path="/:productId" element={<ContentDetail />} />
+          <Route path="/product/:itemId" element={<ContentDetail />} />
         </Route>
         {/* <NotFoundPage /> */}
         <Route path="/notfound" element={<NotFoundPage />} />

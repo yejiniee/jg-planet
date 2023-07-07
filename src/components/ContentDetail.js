@@ -15,7 +15,14 @@ const ContentDetail = () => {
         <div className={styles.views}>조회 20000</div>
         <div className={styles.heart}>찜 100+</div>
       </div>
-
+      <div className={styles.btn_unheart}>
+        <div className={styles.btn_unheartChild} />
+        <div className={styles.div17}>찜해제</div>
+      </div>
+      <div className={styles.btn_heart}>
+        <div className={styles.btn_heartChild} />
+        <div className={styles.div177}>찜하기</div>
+      </div>
       <div
         className={styles.btn_golink}
         onClick={() => {
@@ -43,16 +50,6 @@ const ContentDetail = () => {
           <img className={styles.div15} alt="" src="/img/left-side.svg" />
         </div>
       </div>
-
-      <div className={styles.btn_unheart}>
-        <div className={styles.btn_unheartChild} />
-        <div className={styles.div17}>찜해제</div>
-      </div>
-      <div className={styles.btn_heart}>
-        <div className={styles.btn_heartChild} />
-        <div className={styles.div177}>찜하기</div>
-      </div>
-
       <div className={styles.container}>
         <div className={styles.div20}>중고나라</div>
         <div className={styles.div21}>
