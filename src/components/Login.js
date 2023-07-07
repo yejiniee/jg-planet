@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styles from "../styles/Login.module.css";
-import Planet from "../assets/Planet.svg";
 import googlebtn from "../assets/googlebtn.png"
 import kakaobtn from "../assets/kakaobtn.png"
 
@@ -12,11 +11,9 @@ class Login extends Component {
     return (
       <div className = {styles.container}>
       <div><button /*onClick={}*/ className = {styles.exit}>X</button></div><br></br>
-      <span className={styles.planet}>중고PLANET</span>
       <img
-          className={styles.planetIcon}
           alt=""
-          src={Planet}/><br></br><br></br>
+    src={"img/임시로고.svg"}/><br></br><br></br>
       <div className = {styles.h2}> 로그인하여 더 많은 서비스를 이용하기 </div><br></br>
             <div><button className = {styles.kakao}>{/*onClick={kakaoLogin}>*/}
               <img

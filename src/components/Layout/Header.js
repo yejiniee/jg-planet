@@ -1,4 +1,5 @@
 import styles from "../../styles/Header.module.css";
+import Searchbar from "./Searchbar";
 
 const Header = () => {
   return (
@@ -16,10 +17,13 @@ const Header = () => {
         alt=""
         src="/img/user-cicrle-duotone.svg"
       />
+      {/*<Searchbar></Searchbar>*/}
       <div className={styles.line} />
       <div className={styles.groupItem} />
       <img className={styles.searchAltIcon} alt="" src="/img/search-alt.svg" />
-      <div className={styles.div16}>상품명 입력</div>
+      <input className={styles.div16}
+        placeholder="상품명 입력"
+        />
     </div>
   );
 };
