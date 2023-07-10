@@ -4,6 +4,7 @@ import Category from "./Category";
 import Sidebar from "./Sidebar";
 import Content from "./Content";
 import styles from "../../styles/ContentDetail.module.css";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
@@ -13,7 +14,7 @@ const Layout = () => {
         <Category></Category>
       </div>
       <div className={styles.divcontent}>
-        <Content></Content>
+        <Outlet></Outlet>
       </div>
       <div className={styles.divsidebar}>
         <Sidebar></Sidebar>
