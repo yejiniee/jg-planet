@@ -90,10 +90,37 @@
     position: relative;
 }
 
-
 .clabel {
     top: 5px;
     left: 5px;
     font-family: "Inter", Helvetica;
-    font-size: 16px;
+    font-size: 13px;
 }
+
+
+
+
+/* 아코디언 버튼 스타일 */
+.categorybox button {
+    margin-top: 10px;
+    background-color: #ebeaea;
+    color: #000000;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .categorybox button:hover {
+    background-color: #dcdcdc;
+  }
+  
+  /* 아코디언 콘텐츠 스타일 */
+  .categorybox .accordionContent {
+    margin-top: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ebeaea;
+    padding: 10px;
+    border-radius: 3px;
+  }
+  
