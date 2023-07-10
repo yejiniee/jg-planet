@@ -15,7 +15,8 @@ class Login extends Component {
           alt=""
     src={"img/임시로고.svg"}/><br></br><br></br>
       <div className = {styles.h2}> 로그인하여 더 많은 서비스를 이용하기 </div><br></br>
-            <div><button className = {styles.kakao}>{/*onClick={kakaoLogin}>*/}
+            <div><button className = {styles.kakao}
+            onClick={()=> window.open("/oauth2/authorization/kakao","_blank")}>
               <img
                 src={kakaobtn}
                 width="222"
@@ -23,7 +24,8 @@ class Login extends Component {
               />
             </button>
             </div><br></br><div>
-            <button className = {styles.google}>{/*onClick={googleLogin}>*/}
+            <button className = {styles.google}
+            onClick={()=> window.open("/oauth2/authorization/google","_blank")}>
               <img
                 src={googlebtn}
                 width="222"

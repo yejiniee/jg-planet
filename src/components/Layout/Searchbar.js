@@ -3,6 +3,7 @@ import React, {useState} from "react"
 
 export default function Searchbar () {
 
+    {/* react 내 검색 test
     const Info = [
         {
             "name" : "어쩌구 신발",
@@ -12,17 +13,17 @@ export default function Searchbar () {
             "name" : "어쩌구 가방",
             "cost" : "3,000원"
         },
-    ]
+    ]*/}
 
-    const [search, setSearch] = useState("");
+    const [word, setWord] = useState("");
 
     const onSubmit = async ()=> {
-        window.location.href = "/search/" + search;
+        window.location.href = "/search/" + word;
     }
     
 
   return (
-    <div className={styles.groupParent}>
+    <div>
       <div className={styles.groupItem} />
       <button className={styles.searchAltIcon}
         type="submit"
@@ -32,9 +33,11 @@ export default function Searchbar () {
         type = "text"
         placeholder="상품명 입력"
         onChange={(e) => {
-            setSearch(e.target.value);
-            console.log(search);
+            setWord(e.target.value);
+            console.log(word);
         }}/>
+
+        {/* react 내 검색 test
         {Info.filter((info) =>{
             if(search===""){
                 return info;
@@ -49,8 +52,7 @@ export default function Searchbar () {
                     </div>
                     </div>
                 );
-            })
-        }
+            })}*/}
         
     </div>
   );

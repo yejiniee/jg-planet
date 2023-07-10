@@ -17,13 +17,13 @@ const Header = () => {
         alt=""
         src="/img/user-cicrle-duotone.svg"
       />
-      {/*<Searchbar></Searchbar>*/}
+      <Searchbar></Searchbar>
       <div className={styles.line} />
-      <div className={styles.groupItem} />
+      {/*<div className={styles.groupItem} />
       <img className={styles.searchAltIcon} alt="" src="/img/search-alt.svg" />
       <input className={styles.div16}
         placeholder="상품명 입력"
-        />
+        />*/}
     </div>
   );
 };
