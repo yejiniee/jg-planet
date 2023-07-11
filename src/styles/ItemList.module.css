@@ -1,5 +1,58 @@
-.itemlistbox {
+.listItem {
+    align-items: center;
+    align-self: center;
+    gap: 5px;
     position: relative;
+    width: fit-content;
+    margin: 20px 25px;  /* 위아래, 좌우 */
+}
+
+.imgContainer {
+    position: relative;
+}
+
+.itemimg {
+    width: 190px;
+    height: 130px;
+    object-fit: cover;
+}
+.heartButton {
+    width: 20px;
+    height: 20px;
+    bottom: 13px;
+    right: 10px;
+    position: absolute;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+}
+
+.heartIcon{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.itemname {
+
+}
+
+.itemprice {
+
+}
+
+.itempick {
+    float: right;
+}
+
+.itemlistcontent {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-content: space-around;
 }

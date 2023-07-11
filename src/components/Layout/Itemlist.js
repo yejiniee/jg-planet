@@ -4,11 +4,13 @@ import styles from "../../styles/ItemList.module.css";
 
 const ItemList = () => {
     return (
-        <div className={styles.itemlistbox}>
-            <ListItem/>
-            <ListItem/>
-            <ListItem/>
-            <ListItem/>
+        <div className={styles.itemlistcontent}>
+            <ListItem className={styles.listItem}/>
+            <ListItem className={styles.listItem}/>
+            <ListItem className={styles.listItem}/>
+            <ListItem className={styles.listItem}/>
+            <ListItem className={styles.listItem}/>          
+            <ListItem className={styles.listItem}/>
         </div>
     );
 };
