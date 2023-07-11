@@ -375,7 +375,27 @@
   width: 113px;
   height: 54px;
   cursor: pointer;
+
+  border-radius: 5px;
+  border: 3px solid #5d1fc2;
+  background: #fff;
+  box-sizing: border-box;
 }
+
+.btn_heart {
+  position: absolute;
+  top: 472px;
+  left: 656px;
+  width: 113px;
+  height: 54px;
+  color: var(--color-white);
+  cursor: pointer;
+  border-radius: 5px;
+  border: 3px solid #5d1fc2;
+  background: #5d1fc2;
+  box-sizing: border-box;
+}
+
 .btn_heartChild {
   position: absolute;
   height: 100%;
@@ -388,27 +408,6 @@
   border: 3px solid #5d1fc2;
   background: #5d1fc2;
   box-sizing: border-box;
-}
-.btn_heart {
-  position: absolute;
-  top: 472px;
-  left: 656px;
-  width: 113px;
-  height: 54px;
-  color: var(--color-white);
-  cursor: pointer;
-}
-.state {
-  top: 452px;
-  left: 636px;
-  border-radius: var(--br-8xs);
-  border: 1px dashed #9747ff;
-  box-sizing: border-box;
-  width: 153px;
-  height: 167px;
-  overflow: hidden;
-  text-align: center;
-  color: var(--color-blueviolet-100);
 }
 
 .div20,

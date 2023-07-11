@@ -1,21 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import styles from "../styles/ContentDetail.module.css";
 
-import styled from "styled-components";
-import FullHeartImg from "../assets/heart_full.png";
-import EmptyHeartImg from "../assets/heart_empty.png";
-import styles from "../styles/ItemList.module.css"
-
-
-const Heart = styled.img`
-  width: 20px;
-  height: 20px;
-  color: red;
-`;
-
-const HeartButton = ({ like, onClick }) => {
-    return (
-        <Heart className={styles.heartButton} src={like?FullHeartImg:EmptyHeartImg} onClick={onClick} />
-    );
+const HeartButton = ({ heart, onClick }) => {
+  return (
+    <div
+      className={heart ? styles.btn_unheart : styles.btn_heart}
+      onClick={onClick}
+    >
+      <div className={heart ? styles.div17 : styles.div177}>
+        {heart ? <p>찜해제</p> : <p>찜하기</p>}
+      </div>
+    </div>
+  );
 };
 
 export default HeartButton;

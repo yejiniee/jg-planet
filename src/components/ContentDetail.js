@@ -1,8 +1,34 @@
 import styles from "../styles/ContentDetail.module.css";
+import React, { useState, useEffect } from "react";
 
-const url = "https://web.joongna.com/"; //상품의 원글 url
+import HeartButton from "./HeartButton";
+import axios from "axios";
+
+const url = "https://web.joongna.com/"; //상품의 원글 url-추후 수정
 
 const ContentDetail = () => {
+  const [heart, setHeart] = useState(false);
+
+  /*
+  //백에서 찜여부 데이터 받아와야 확인가능... 근데 어떻게 하죠? 으아아아
+  useEffect(async () => {
+    const fetchData = async () => {
+      const res = await axios.get("http//localhost:8080/get");
+      if (res.data.type === "heart") setHeart(true);
+    };
+    fetchData();
+  }, []);
+
+  const toggleLike = async (e) => {
+    const res = await axios.post("http//localhost:8080/post"); // [POST] 사용자가 좋아요를 누름 -> DB 갱신
+    setHeart(!heart);
+  };
+  */
+
+  const toggleLike = async (e) => {
+    setHeart(!heart);
+  };
+
   return (
     <div className={styles.div}>
       <img className={styles.icon} alt="" src="/img/빈 이미지.svg" />
@@ -15,14 +41,8 @@ const ContentDetail = () => {
         <div className={styles.views}>조회 20000</div>
         <div className={styles.heart}>찜 100+</div>
       </div>
-      <div className={styles.btn_unheart}>
-        <div className={styles.btn_unheartChild} />
-        <div className={styles.div17}>찜해제</div>
-      </div>
-      <div className={styles.btn_heart}>
-        <div className={styles.btn_heartChild} />
-        <div className={styles.div177}>찜하기</div>
-      </div>
+      <HeartButton heart={heart} onClick={toggleLike}></HeartButton>
+
       <div
         className={styles.btn_golink}
         onClick={() => {
