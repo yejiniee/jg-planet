@@ -7,7 +7,7 @@ import ContentDetail from "./components/ContentDetail";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
 import Join from "./components/Join";
-import Searchbar from "./components/Layout/Searchbar";
+import Search from "./components/Search"
 
 function App() {
   //컴포넌트를 만드는 코드
@@ -22,11 +22,13 @@ function App() {
           <Route path="/product/:itemId" element={<ContentDetail />} />
         </Route>
         {/* <NotFoundPage /> */}
-        <Route path="/notfound" element={<NotFoundPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+        {/* 로그인 */}
         <Route path="/Login" element={<Login />} />
         <Route path="/Logout" element={<Logout />} />
         <Route path="/Join" element={<Join />} />
-        <Route path="/search/:search" element={<Searchbar />} />
+        {/* 검색 */}
+        <Route path="/search/:word" element={<Search />} />
       </Routes>
     </BrowserRouter>
   );
