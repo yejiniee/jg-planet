@@ -7,11 +7,11 @@ import ContentDetail from "./components/ContentDetail";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
 import Join from "./components/Join";
-import Search from "./components/Search"
+import Search from "./components/Search";
 
 function App() {
   //컴포넌트를 만드는 코드
-  //아직 완성 아님 수정중입니다...
+  //수정중입니다...
   return (
     <BrowserRouter>
       <Routes>
