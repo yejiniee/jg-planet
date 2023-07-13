@@ -14,7 +14,10 @@ const CategoryBox = () => {
   return (
     <AnimatePresence>
     <motion.div layout className={styles.categorybox} onClick={toggleOpen} initial={{ borderRadius: 10 }}>
-      <motion.div layout className={styles.avatar} />
+      <motion.div layout className={styles.accordionTitle}>
+        <motion.img layout className={styles.avatar} alt="" src="/img/category-menu.svg" />          
+        <motion.div layout className={styles.ctitleLabel}>Category</motion.div>
+      </motion.div>
         {isAccordionOpen && (
         <motion.div layout className={styles.accordionContent}>
         {/* Add your accordion content here */}

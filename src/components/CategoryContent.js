@@ -12,7 +12,7 @@ export const CategoryContent = ({ text = "여성패션"}) => {
     >
         <div className={styles.categoryContent}>
             <input type="checkbox" />
-            <div className={styles.clabel}>{text}</div>
+            <div className={styles.cLabel}>{text}</div>
         </div>
     </motion.div>
     );

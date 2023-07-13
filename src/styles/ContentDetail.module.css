@@ -16,10 +16,12 @@
 }
 
 .divsidebar {
+  position: fixed;
   display: inline-block;
-  top: 184px;
-  left: 1086px;
-  width: 12.5%;
+  top: 24%;
+  right: 10px;
+  /*left: 1086px;*/
+  width: 10%;
 }
 
 .title,
