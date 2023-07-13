@@ -16,7 +16,7 @@ export const ListItem = ({ text = "상품명", store = "당근", cost = "0" }) =
     };
 
     const handleImgClick = () => {
-      alert("이미지 버튼 눌렸다\n(기능 추가 예정)");
+      {/* 기능 추가 */}
     };
 
     const handleHeartClick = () => {
@@ -38,17 +38,15 @@ export const ListItem = ({ text = "상품명", store = "당근", cost = "0" }) =
     return (
         <div className={styles.listItem}>
           <div className={styles.imgContainer}>
-            <a href="/main"><img className={styles.itemimg} alt="" src="/img/빈 이미지.svg" onClick={handleImgClick}/></a>
+            <a href="/ContentDetail"><img className={styles.itemimg} alt="" src="/img/빈 이미지.svg" onClick={handleImgClick}/></a>
             <HeartButtonMain like={like} onClick={handleHeartClick}/>
             {/* <button className={styles.heartButton} onClick={handleHeartClick}>
                 <img className={styles.heartIcon} src="/img/heart_empty.png" alt="하트" />
             </button>*/}
             
           </div>          
-            {/*<HeartButton like={like} onClick={toggleLike}/>*/}
             <div className={styles.iteminfo}>
               {renderLogo()}
-              {/*<img className={styles.itemstorelogo} alt="" src="/img/당근마켓 아이콘 1.png" />*/}
               <div className={styles.itemname}>{text}</div>
               <div className={styles.itempick}>찜 횟수</div>
               <div className={styles.itemprice}>{cost} 원</div> 

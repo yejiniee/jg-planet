@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import Content from "./Content";
 import ItemList from "./Itemlist";
 import styles from "../../styles/ContentDetail.module.css";
+import { motion, AnimatePresence } from "framer-motion";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {

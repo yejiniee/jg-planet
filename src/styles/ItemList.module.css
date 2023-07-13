@@ -17,9 +17,10 @@
     height: 130px;
     object-fit: cover;
 }
+
 .heartButton {
-    width: 30px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     bottom: 13px;
     right: 8px;
     position: absolute;
