@@ -2,7 +2,7 @@
   display: inline-block;
   position: relative;
   top: 130px;
-  left: 80px;
+  left: 100px;
   width: 80%;
   margin: 0 auto;
 }
@@ -11,8 +11,8 @@
   display: inline-block;
   position: relative;
   top: 140px;
-  width: 80%;
-  left: 80px;
+  width: 100%;
+  /*left: 80px;*/
 }
 
 .divsidebar {

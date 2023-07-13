@@ -7,9 +7,9 @@
     padding: 10px;
     position: relative;
     border-radius: 10px;
-    width: 100%;
+    width: 90%;
     height: 20%;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 
 .accordionTitle {
@@ -26,6 +26,8 @@
 }
 
 .ctitleLabel {
+  display: inline;
+  margin-left: 10px;
   font-size: larger;
   font-weight: bolder;
 }
