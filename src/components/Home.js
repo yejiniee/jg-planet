@@ -1,6 +1,6 @@
-import Category from "./Category";
-import ItemList from "./Itemlist";
-import styles from "../../styles/ContentDetail.module.css";
+import Category from "./Layout/Category";
+import ItemList from "./Layout/Itemlist";
+import styles from "../styles/ContentDetail.module.css";
 
 const Home = () => {
   return (
