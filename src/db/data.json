@@ -18,17 +18,17 @@
       "name": "유저2",
       "date": 20201023,
       "heartCnt": 2,
-      "thumbnail": ""
+      "thumbnail": "/img/빈 이미지.svg"
     },
     {
-      "id": 3,
+      "id": 2,
       "store": "중고",
       "title": "상품3",
       "price": 140000,
       "name": "유저3",
       "date": 20201023,
       "heartCnt": 3,
-      "thumbnail": ""
+      "thumbnail": "/img/빈 이미지.svg"
     }
   ]
 }

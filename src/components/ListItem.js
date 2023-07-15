@@ -3,7 +3,14 @@ import React, { useState, useEffect } from "react";
 import HeartButtonMain from "./HeartButtonMain";
 import styles from "../styles/ItemList.module.css";
 
-export const ListItem = ({ title = "상품명", store = "당근", price = "0" }) => {
+export const ListItem = ({
+  id = 0,
+  title = "상품명",
+  store = "당근",
+  price = "0",
+  src = "/img/빈 이미지.svg",
+  heartCnt = 0,
+}) => {
   const renderLogo = () => {
     if (store === "당근") {
       return (
@@ -33,10 +40,8 @@ export const ListItem = ({ title = "상품명", store = "당근", price = "0" })
     return null;
   };
 
-  const handleImgClick = () => {
-    {
-      /* 기능 추가 */
-    }
+  const handleItemClick = () => {
+    window.location.href = `/product/${id}`;
   };
 
   const handleHeartClick = () => {
@@ -59,14 +64,13 @@ export const ListItem = ({ title = "상품명", store = "당근", price = "0" })
   return (
     <div className={styles.listItem}>
       <div className={styles.imgContainer}>
-        <a href="/*">
-          <img
-            className={styles.itemimg}
-            alt=""
-            src="/img/빈 이미지.svg"
-            onClick={handleImgClick}
-          />
-        </a>
+        <img
+          className={styles.itemimg}
+          alt=""
+          src={src}
+          onClick={handleItemClick}
+        />
+
         <HeartButtonMain like={like} onClick={handleHeartClick} />
         {/* <button className={styles.heartButton} onClick={handleHeartClick}>
                 <img className={styles.heartIcon} src="/img/heart_empty.png" alt="하트" />
@@ -74,10 +78,8 @@ export const ListItem = ({ title = "상품명", store = "당근", price = "0" })
       </div>
       <div className={styles.iteminfo}>
         {renderLogo()}
-        <a href="/*">
-          <div className={styles.itemname}>{title}</div>
-        </a>
-        <div className={styles.itempick}>찜 횟수</div>
+        <div className={styles.itemname}>{title}</div>
+        <div className={styles.itempick}>찜 {heartCnt}</div>
         <div className={styles.itemprice}>{price} 원</div>
       </div>
     </div>

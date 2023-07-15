@@ -10,10 +10,12 @@ const ItemList = () => {
         <ListItem
           className={styles.listItem}
           key={item.id}
+          id={item.id}
           store={item.store}
           price={item.price}
           title={item.title}
           src={item.thumbnail}
+          heartCnt={item.heartCnt}
         />
       ))}
     </div>
