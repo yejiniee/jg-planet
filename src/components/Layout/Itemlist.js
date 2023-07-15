@@ -1,6 +1,6 @@
 import React from "react";
 import { ListItem } from "../ListItem";
-import styles from "../../styles/ItemList.module.css";
+import styles from "../../styles/css/ItemList.module.css";
 import dummy from "../../db/data.json";
 
 const ItemList = () => {

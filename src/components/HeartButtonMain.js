@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import FullHeartImg from "../assets/heart_full.png";
 import EmptyHeartImg from "../assets/heart_empty.png";
-import styles from "../styles/ItemList.module.css";
+import styles from "../styles/css/ItemList.module.css";
 
 {
   /* 

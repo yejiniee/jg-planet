@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import HeartButtonMain from "./HeartButtonMain";
-import styles from "../styles/ItemList.module.css";
+import styles from "../styles/css/ItemList.module.css";
 
 export const ListItem = ({
   id = 0,

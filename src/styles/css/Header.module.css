@@ -10,7 +10,7 @@
   width: 545px;
   height: 360px;
   font-size: var(--font-size-xl);
-  font-family: var(--font-inter);
+  font-family: Noto Sans KR;
 }
 .planet {
   top: -5px;
@@ -110,7 +110,7 @@
   font-family: var(--font-notoseriftamilslanted);
 }
 
-.pannel{
+.pannel {
   position: relative;
   top: 100px;
   left: 80px;
@@ -120,11 +120,10 @@
   padding: 20px;
 }
 
-.prod{
-    width: 100px;
-    height: 10px;
-    font-size: 16px;
-    color: black;
-    border: 2px solid black;
-
+.prod {
+  width: 100px;
+  height: 10px;
+  font-size: 16px;
+  color: black;
+  border: 2px solid black;
 }

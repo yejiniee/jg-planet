@@ -1,4 +1,4 @@
-import styles from "../styles/ContentDetail.module.css";
+import styles from "../styles/css/ContentDetail.module.css";
 import React, { useState, useEffect, useParams } from "react";
 
 import HeartButton from "./HeartButton";
