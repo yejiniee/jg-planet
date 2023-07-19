@@ -4,15 +4,19 @@ import {useNavigate} from 'react-router-dom';
 
 function Sidebar(props) {
 //props에 detail item 넣어줘야함. item img 경로 정해지면 변경.
-  const lsts = localStorage.getItem('watched')
-  const lstss = JSON.parse(lsts).reverse();
   const navigate = useNavigate();
+
+  localStorage.setItem('watched', JSON.stringify([]))
+  //일단 한번 watched 만듦.
 
   useEffect(() => {
     if(!localStorage.getItem('watched'))
     localStorage.setItem('watched', JSON.stringify([]))
   },[])
 // 처음에 최근 본 상품이 아무것도 없으면 watched 만듬.
+
+const lsts = localStorage.getItem('watched')
+const lstss = JSON.parse(lsts).reverse();
 
   useEffect(()=>{
     let lst = JSON.parse(lsts)
