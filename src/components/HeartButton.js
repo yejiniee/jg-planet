@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/ContentDetail.module.css";
+import styles from "../styles/css/ContentDetail.module.css";
 
 const HeartButton = ({ heart, onClick }) => {
   return (

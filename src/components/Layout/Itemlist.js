@@ -1,19 +1,25 @@
 import React from "react";
-import { ListItem } from "../ListItem"
-import styles from "../../styles/ItemList.module.css";
+import { ListItem } from "../ListItem";
+import styles from "../../styles/css/ItemList.module.css";
+import dummy from "../../db/data.json";
 
 const ItemList = () => {
-    return (
-        <div className={styles.itemlistcontent}>
-            <ListItem className={styles.listItem} store="번개" cost="23000" />
-            <ListItem className={styles.listItem} store="중고" cost="34200"/>
-            <ListItem className={styles.listItem} store="당근" cost="8000"/>
-            <ListItem className={styles.listItem} store="번개" cost="72000"/>
-            <ListItem className={styles.listItem} store="당근" cost="30000"/>          
-            <ListItem className={styles.listItem} store="당근" cost="18000"/>
-        </div>
-    );
+  return (
+    <div className={styles.itemlistcontent}>
+      {dummy.products.map((item) => (
+        <ListItem
+          className={styles.listItem}
+          key={item.id}
+          id={item.id}
+          store={item.store}
+          price={item.price}
+          title={item.title}
+          src={item.thumbnail}
+          heartCnt={item.heartCnt}
+        />
+      ))}
+    </div>
+  );
 };
-  
+
 export default ItemList;
-  

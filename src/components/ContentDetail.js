@@ -1,12 +1,19 @@
-import styles from "../styles/ContentDetail.module.css";
-import React, { useState, useEffect } from "react";
+import styles from "../styles/css/ContentDetail.module.css";
+import React, { useState, useEffect, useParams } from "react";
 
 import HeartButton from "./HeartButton";
 import axios from "axios";
 
 const url = "https://web.joongna.com/"; //상품의 원글 url-추후 수정
 
-const ContentDetail = () => {
+const ContentDetail = (props) => {
+  /*
+  let { itemId } = useParams();
+  let find = props.products.find(
+    (product) => parseInt(product.itemId) === parseInt(itemId)
+  );
+  console.log(find);
+  */
   const [heart, setHeart] = useState(false);
 
   /*
@@ -33,13 +40,13 @@ const ContentDetail = () => {
     <div className={styles.div}>
       <img className={styles.icon} alt="" src="/img/빈 이미지.svg" />
       <div className={styles.parent}>
-        <b className={styles.title}>어쩌구 저쩌구 신발</b>
-        <b className={styles.price}>140,000원</b>
+        <b className={styles.title}>제목</b>
+        <b className={styles.price}>120,000원</b>
         <div className={styles.category}>{`홈 > 여성의류 > 신발`}</div>
-        <div className={styles.name}>바나나맛맛있어요</div>
-        <div className={styles.date}>2023-02-25</div>
+        <div className={styles.name}>닉네임</div>
+        <div className={styles.date}>5분 전</div>
         <div className={styles.views}>조회 20000</div>
-        <div className={styles.heart}>찜 100+</div>
+        <div className={styles.heart}>찜 25</div>
       </div>
       <HeartButton heart={heart} onClick={toggleLike}></HeartButton>
 

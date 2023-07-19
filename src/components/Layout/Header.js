@@ -1,4 +1,4 @@
-import styles from "../../styles/Header.module.css";
+import styles from "../../styles/css/Header.module.css";
 import Searchbar from "./Searchbar";
 
 const Header = () => {

@@ -1,9 +1,9 @@
-import styles from "../../styles/Header.module.css";
-import React, {useState} from "react"
+import styles from "../../styles/css/Header.module.css";
+import React, { useState } from "react";
 
-export default function Searchbar () {
-
-    {/* react 내 검색 test
+export default function Searchbar() {
+  {
+    /* react 내 검색 test
     const Info = [
         {
             "name" : "어쩌구 신발",
@@ -13,31 +13,39 @@ export default function Searchbar () {
             "name" : "어쩌구 가방",
             "cost" : "3,000원"
         },
-    ]*/}
+    ]*/
+  }
 
-    const [word, setWord] = useState("");
+  const [word, setWord] = useState("");
 
-    const onSubmit = async ()=> {
-        window.location.href = "/search/" + word;
-    }
-    
+  const onSubmit = async () => {
+    window.location.href = "/search/" + word;
+  };
 
   return (
     <div>
       <div className={styles.groupItem} />
-      <button className={styles.searchAltIcon}
+      <button
+        className={styles.searchAltIcon}
         type="submit"
-        onClick={()=>{onSubmit()}}><img alt="" src="/img/search-alt.svg" /></button>
-      <input className={styles.div16}
+        onClick={() => {
+          onSubmit();
+        }}
+      >
+        <img alt="" src="/img/search-alt.svg" />
+      </button>
+      <input
+        className={styles.div16}
         name="keyword"
-        type = "text"
+        type="text"
         placeholder="상품명 입력"
         onChange={(e) => {
-            setWord(e.target.value);
-            console.log(word);
-        }}/>
+          setWord(e.target.value);
+          console.log(word);
+        }}
+      />
 
-        {/* react 내 검색 test
+      {/* react 내 검색 test
         {Info.filter((info) =>{
             if(search===""){
                 return info;
@@ -53,9 +61,6 @@ export default function Searchbar () {
                     </div>
                 );
             })}*/}
-        
     </div>
   );
-};
-
-
+}

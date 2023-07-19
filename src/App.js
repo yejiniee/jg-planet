@@ -2,7 +2,7 @@ import "./App.css";
 import NotFoundPage from "./components/NotFoundPage";
 import Layout from "./components/Layout/Layout";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Content from "./components/Layout/Content";
+import Home from "./components/Home";
 import ContentDetail from "./components/ContentDetail";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
@@ -16,8 +16,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Layout />}>
-          {/* 메인페이지-아직이름몰라서대충넣어놓음 */}
-          <Route path="/main" element={<ContentDetail />} />
+          {/* 메인페이지*/}
+          <Route path="/" element={<Home />} />
           {/* 제품상세 페이지 */}
           <Route path="/product/:itemId" element={<ContentDetail />} />
         </Route>

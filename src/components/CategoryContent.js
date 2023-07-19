@@ -1,7 +1,7 @@
-import PropTypes from "prop-types"
-import React from "react"
+import PropTypes from "prop-types";
+import React from "react";
 import { motion } from "framer-motion";
-import styles from "../styles/Category.module.css"
+import styles from "../styles/css/Category.module.css";
 
 export const CategoryContent = ({ text = "여성패션"}) => {
     const handleCheckboxClick = (event) => {
@@ -19,9 +19,9 @@ export const CategoryContent = ({ text = "여성패션"}) => {
             <div className={styles.cLabel}>{text}</div>
         </div>
     </motion.div>
-    );
+  );
 };
 
 CategoryContent.propTypes = {
-    text: PropTypes.string,
-}
+  text: PropTypes.string,
+};
