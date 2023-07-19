@@ -7,6 +7,7 @@ function Sidebar(props) {
   const navigate = useNavigate();
 
   localStorage.setItem('watched', JSON.stringify([]))
+  //일단 한번 watched 만듦.
 
   useEffect(() => {
     if(!localStorage.getItem('watched'))
