@@ -15,8 +15,9 @@ export const CategoryContent = ({ text = "여성패션"}) => {
         exit={{ opacity: 0 }}
     >
         <div className={styles.categoryContent}>
-            <input type="checkbox" onClick={handleCheckboxClick}  />
-            <div className={styles.cLabel}>{text}</div>
+            <ul id={styles.leftToRight}>
+                <li><input className={styles.contentBtn} type="button" value={text} onClick={handleCheckboxClick} /></li>
+            </ul>        
         </div>
     </motion.div>
   );
