@@ -6,18 +6,13 @@ function Sidebar(props) {
   //props에 detail item 넣어줘야함. item img 경로 정해지면 변경.
   const navigate = useNavigate();
 
-  localStorage.setItem("watched", JSON.stringify([]));
-  //일단 한번 watched 만듦.
-
-  useEffect(() => {
-    if (!localStorage.getItem("watched"))
-      localStorage.setItem("watched", JSON.stringify([]));
-  }, []);
+  if (!localStorage.getItem("watched")){
+    localStorage.setItem("watched", JSON.stringify([]));}
   // 처음에 최근 본 상품이 아무것도 없으면 watched 만듬.
 
   const lsts = localStorage.getItem("watched");
   const lstss = JSON.parse(lsts).reverse();
-
+{/*
   useEffect(() => {
     let lst = JSON.parse(lsts);
     let dtail = props[0];
@@ -30,7 +25,7 @@ function Sidebar(props) {
     localStorage.setItem("watched", JSON.stringify(lst));
   }, []);
   // detail 들어가면 product id를 watched에 추가
-
+*/}
   return (
     <div className={styles.div}>
       <div className={styles.box}>
