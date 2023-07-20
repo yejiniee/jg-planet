@@ -7,9 +7,9 @@
     padding: 10px;
     position: relative;
     border-radius: 10px;
-    width: 90%;
+    width: 70%;
     height: 20%;
-    /*margin: 0 auto;*/
+    margin: 0 auto;
 }
 
 .accordionTitle {

@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import styles from "../styles/css/Category.module.css";
 
 export const CategoryContent = ({ text = "여성패션"}) => {
-    const handleCheckboxClick = (event) => {
-        event.stopPropagation();
+    const selectCategory = (event) => {
+        const buttonText = event.target.value;
+        alert(buttonText);
+        window.location.reload();
       };
 
     return (
@@ -16,7 +18,7 @@ export const CategoryContent = ({ text = "여성패션"}) => {
     >
         <div className={styles.categoryContent}>
             <ul id={styles.leftToRight}>
-                <li><input className={styles.contentBtn} type="button" value={text} onClick={handleCheckboxClick} /></li>
+                <li><input className={styles.contentBtn} type="submit" value={text} onClick={selectCategory} /></li>
             </ul>        
         </div>
     </motion.div>
