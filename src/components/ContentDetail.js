@@ -16,13 +16,13 @@ const ContentDetail = (props) => {
   */
   const [heart, setHeart] = useState(false);
 
+  //찜하기/해제 작동되는지는 백이랑 통합 후 확인가능...
   /*
-  //백에서 찜여부 데이터 받아와야 확인가능... 근데 어떻게 하죠? 으아아아
-  useEffect(async () => {
-    const fetchData = async () => {
-      const res = await axios.get("http//localhost:8080/get");
-      if (res.data.type === "heart") setHeart(true);
-    };
+  const fetchData = async () => {
+    const res = await axios.get("http//localhost:8080/get");
+    if (res.data.type === "heart") setHeart(true);
+  };
+  useEffect(() => {
     fetchData();
   }, []);
 
@@ -30,13 +30,14 @@ const ContentDetail = (props) => {
     const res = await axios.post("http//localhost:8080/post"); // [POST] 사용자가 좋아요를 누름 -> DB 갱신
     setHeart(!heart);
   };
-  */
+*/
 
   const toggleLike = async (e) => {
     setHeart(!heart);
   };
 
-{/*
+  {
+    /*
   const lsts = localStorage.getItem("watched");
   useEffect(() => {
     let lst = JSON.parse(lsts);
@@ -51,7 +52,8 @@ const ContentDetail = (props) => {
   }, []);
   // 최근 본  상품.
   // detail 들어가면 product id를 watched에 추가
-*/}
+*/
+  }
 
   return (
     <div className={styles.div}>
