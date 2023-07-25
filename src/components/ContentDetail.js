@@ -16,22 +16,25 @@ const ContentDetail = (props) => {
   */
   const [heart, setHeart] = useState(false);
 
-  //찜하기/해제 작동되는지는 백이랑 통합 후 확인가능...
+  //찜하기/해제 작동되는지 백이랑 통합 후 확인가능
   /*
   const fetchData = async () => {
-    const res = await axios.get("http//localhost:8080/get");
-    if (res.data.type === "heart") setHeart(true);
+    try {
+      const res = await axios.get("http//localhost:8080/product/heartbutton"); //url 뭐 넣어야될지 모르겠다..
+      if (res.data.type === "heart") setHeart(true);
+    } catch (e) {
+      console.log(e);
+    }
   };
   useEffect(() => {
     fetchData();
   }, []);
 
   const toggleLike = async (e) => {
-    const res = await axios.post("http//localhost:8080/post"); // [POST] 사용자가 좋아요를 누름 -> DB 갱신
+    const res = await axios.post("http//localhost:8080/product/heartbutton"); // 좋아요 누름 -> DB 갱신
     setHeart(!heart);
   };
 */
-
   const toggleLike = async (e) => {
     setHeart(!heart);
   };
