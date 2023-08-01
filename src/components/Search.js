@@ -4,6 +4,11 @@ import styles from "../styles/css/ItemList.module.css";
 import {ListItem} from "./ListItem";
 import {useParams} from "react-router";
 
+//글자수 제한 함수
+const truncate = (str, n) => {
+  return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+};
+
 const Search = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -44,7 +49,7 @@ const Search = () => {
                 id={item.id}
                 store={item.market}
                 price={item.price}
-                title={item.name}
+                title={truncate(item.name, 10)}
                 src={item.image}
                 heartCnt={item.heartCnt}
             />
