@@ -4,7 +4,7 @@ import React, { useState, useEffect, useParams } from "react";
 import HeartButton from "./HeartButton";
 import axios from "axios";
 
-let url = "https://web.joongna.com/"; //상품의 원글 url- producturl
+let url = "https://web.joongna.com/"; //상품의 원글 url
 
 const ContentDetail = (props) => {
   const [heart, setHeart] = useState(false);
@@ -28,14 +28,7 @@ const ContentDetail = (props) => {
     setHeart(!heart);
   };
 */
-  const fetchURLData = async () => {
-    const response = await axios.get("/api/product/{itemId}/{market}/url");
-    url = response.data;
-    console.log("url", url);
-  };
-  useEffect(() => {
-    fetchURLData();
-  }, []);
+
   /*
   const fetchData = async () => {
     try {
@@ -58,6 +51,15 @@ const ContentDetail = (props) => {
   const toggleLike = async (e) => {
     setHeart(!heart);
   };
+
+  const fetchURLData = async () => {
+    const response = await axios.get("/api/product/{itemId}/{market}/url");
+    url = response.data;
+    console.log("url", url);
+  };
+  useEffect(() => {
+    fetchURLData();
+  }, []);
 
   {
     /*
