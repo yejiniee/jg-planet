@@ -4,8 +4,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/fonts/Font.css";
-/*
-import { configureStore } from "@reduxjs/toolkit";
+
+/*import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./module";
 import { Provider } from "react-redux";
 import { createLogger } from "redux-logger";
