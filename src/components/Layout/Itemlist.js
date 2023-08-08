@@ -15,7 +15,8 @@ const ItemList = ({ selectedCategoryId }) => {
   const [error, setError] = useState(null);
 
   /* 페이지네이션 새로 추가한 부분 */
-  const [limit, setLimit] = useState(8); //페이지 당 최대 게시물 수- 임시 지정
+  const limit = 8; //페이지 당 최대 게시물 수- 임시 지정
+  //const [limit, setLimit] = useState(8);
   const [page, setPage] = useState(1); //현재 페이지 번호
   const offset = (page - 1) * limit; //페이지 당 첫 게시물 위치
   //
@@ -50,11 +51,6 @@ const ItemList = ({ selectedCategoryId }) => {
     }
     setLoading(false);
   };
-  {
-    /*useEffect(() => {
-    fetchData();
-  }, []);*/
-  }
 
   useEffect(() => {
     if (selectedCategoryId !== null) {

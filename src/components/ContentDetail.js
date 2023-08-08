@@ -8,6 +8,7 @@ let url = "https://web.joongna.com/"; //상품의 원글
 
 const ContentDetail = (props) => {
   const [heart, setHeart] = useState(false);
+
   const fetchURLData = async () => {
     //해당 상품 외부 링크 이동
     const response = await axios.get("/api/product/{itemId}/{market}/url");

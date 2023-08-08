@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-//새로추가
 /*
+새로추가
 -total: 총 게시물 수
 -setPage() 함수를 호출하여 page 상태 변경
   => <ItemList/> 컴포넌트는 새로운 페이지 번호에 해당하는 게시물 범위를 계산하여 다시 화면을 렌터링
