@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/css/Logout.module.css";
+import styles from "../styles/css/Login.module.css";
 import { useNavigate } from "react-router-dom";
 
 function Logout() {
@@ -13,11 +13,11 @@ function Logout() {
     }
 
     return (
-      <div className={styles.container}>
+      <div className={styles.logoutcontainer}>
         <img alt="" src={"img/임시로고.svg"} />
         <br></br>
         <br></br>
-        <div className={styles.h2}> 로그아웃 하시겠습니까? </div>
+        <div className={styles.lh2}> 로그아웃 하시겠습니까? </div>
         <br></br>
         <div>
           <button className={styles.no}

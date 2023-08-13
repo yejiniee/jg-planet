@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import styles from "../styles/css/Join.module.css";
+import styles from "../styles/css/Login.module.css";
 import { useNavigate } from "react-router-dom";
 
 function Join() {
@@ -19,11 +19,11 @@ function Join() {
         }
     )
     return (
-      <div className={styles.container}>
+      <div className={styles.joincontainer}>
         <img alt="" src={"img/임시로고.svg"} />
         <br></br>
         <br></br>
-        <div className={styles.h2}> 로그인/가입완료 </div>
+        <div className={styles.jh2}> 로그인/가입완료 </div>
         <br></br>
         <div className={styles.h3}> 환영합니다! </div>
         <br></br>
