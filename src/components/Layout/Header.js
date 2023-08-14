@@ -4,6 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
+  function loginlink() {
+    if (!localStorage.getItem("token")) navigate("/login");
+    else navigate("/logout");
+  }
+
   return (
     <div className={styles.groupParent}>
       <div className={styles.planetParent}>
@@ -17,10 +22,7 @@ const Header = () => {
       >
         <img src="/img/basket-alt-3.svg" />
       </div>
-      <button
-        className={styles.userCicrleDuotoneIcon}
-        onClick={() => navigate("/login")}
-      >
+      <button className={styles.userCicrleDuotoneIcon} onClick={loginlink}>
         <img src="/img/user-cicrle-duotone.svg" />
       </button>
       <Searchbar></Searchbar>
