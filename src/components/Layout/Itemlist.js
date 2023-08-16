@@ -15,9 +15,19 @@ const ItemList = ({ selectedCategoryId }) => {
   const [error, setError] = useState(null);
 
   /* 페이지네이션 새로 추가한 부분 */
-  const limit = 40; //페이지 당 최대 게시물 수
+  const limit = 8; //페이지 당 최대 게시물 수
   const [page, setPage] = useState(1); //현재 페이지 번호
-  const offset = (page - 1) * limit; //페이지 당 첫 게시물 위치
+  //const offset = (page - 1) * limit; //페이지 당 첫 게시물 위치
+
+  //흠
+  const indexOfLast = page * limit;
+  const indexOfFirst = (page - 1) * limit;
+  const currentPosts = (data) => {
+      let currentPosts = 0;
+      currentPosts = data.slice(indexOfFirst, indexOfLast);
+      //console.log({"current post: ": currentPosts, "indexofFirst": indexOfFirst, "indexofLast": indexOfLast})
+      return currentPosts;
+    };
   //
 
   const fetchData = async () => {
@@ -43,7 +53,7 @@ const ItemList = ({ selectedCategoryId }) => {
       // axios 등을 이용하여 categoryId를 이용하여 서버에서 데이터를 가져옵니다.
       //const response = await axios.get(`/api?categoryId=${categoryId}`);
       //alert(categoryId+"itemlist.js");
-      const response = await axios.get(`/api/B/${categoryId}/1`);
+      const response = await axios.get(`/api/${categoryId}/1`);
       setData(response.data);
     } catch (e) {
       setError(e);
@@ -68,13 +78,15 @@ const ItemList = ({ selectedCategoryId }) => {
   if (error) return <div>에러가 발생했습니다</div>;
   if (!data) return null;
 
+
+
   return (
     <div>
       <div className={styles.itemlistcontent}>
-        {data.slice(offset, offset + limit).map((item) => (
+        {currentPosts(data).map((item) => (
           <ListItem
             className={styles.listItem}
-            key={item.name}
+            key={item.url}
             id={item.id}
             store={item.market}
             price={item.price}

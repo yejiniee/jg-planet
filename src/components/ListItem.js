@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 import HeartButtonMain from "./HeartButtonMain";
 import styles from "../styles/css/ItemList.module.css";
 
@@ -12,8 +13,7 @@ export const ListItem = ({
   heartCnt = 0,
 }) => {
   const renderLogo = () => {
-    if (store === "CARROT") {
-      //당근마켓
+    if (store === "CARROT") { //당근마켓
       return (
         <img
           className={styles.itemstorelogo}
@@ -21,8 +21,7 @@ export const ListItem = ({
           src="/img/당근마켓 아이콘 1.png"
         />
       );
-    } else if (store === "BUNJANG") {
-      //번개장터
+    } else if (store === "BUNJANG") { //번개장터
       return (
         <img
           className={styles.itemstorelogo}
@@ -30,8 +29,7 @@ export const ListItem = ({
           src="/img/번개장터 아이콘 1.png"
         />
       );
-    } else if (store === "JOONGGONARA") {
-      //중고나라
+    } else if (store === "JOONGGONARA") { //중고나라
       return (
         <img
           className={styles.itemstorelogo}
@@ -43,9 +41,17 @@ export const ListItem = ({
     return null;
   };
 
+  const navigate = useNavigate();
   const handleItemClick = () => {
-    window.location.href = `/product/${id}`;
+    //window.location.href = `/product/${id}`;
+    navigate(`/product/${id}`, {
+        state : {
+          id: id,
+          store: store
+        }
+    });
   };
+
 
   const handleHeartClick = () => {
     setLike(!like);
