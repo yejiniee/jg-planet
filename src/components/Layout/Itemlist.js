@@ -88,11 +88,11 @@ const ItemList = ({ selectedCategoryId }) => {
             className={styles.listItem}
             key={item.url}
             id={item.id}
-            store={item.market}
+            market={item.market}
             price={item.price}
-            title={truncate(item.name, 10)}
-            src={item.image}
-            heartCnt={item.hearts}
+            name={truncate(item.name, 10)}
+            image={item.image}
+            hearts={item.hearts}
           />
         ))}
       </div>
