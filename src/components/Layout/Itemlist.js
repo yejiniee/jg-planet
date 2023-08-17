@@ -23,15 +23,11 @@ const ItemList = ({ selectedCategoryId }) => {
   const indexOfLast = page * limit;
   const indexOfFirst = (page - 1) * limit;
   const currentPosts = (data) => {
-    let currentPosts = 0;
-    currentPosts = data.slice(indexOfFirst, indexOfLast);
-    console.log({
-      "current post: ": currentPosts,
-      indexofFirst: indexOfFirst,
-      indexofLast: indexOfLast,
-    });
-    return currentPosts;
-  };
+      let currentPosts = 0;
+      currentPosts = data.slice(indexOfFirst, indexOfLast);
+      //console.log({"current post: ": currentPosts, "indexofFirst": indexOfFirst, "indexofLast": indexOfLast})
+      return currentPosts;
+    };
   //
 
   const fetchData = async () => {
@@ -81,6 +77,8 @@ const ItemList = ({ selectedCategoryId }) => {
   if (loading) return <div>로딩중..</div>;
   if (error) return <div>에러가 발생했습니다</div>;
   if (!data) return null;
+
+
 
   return (
     <div>

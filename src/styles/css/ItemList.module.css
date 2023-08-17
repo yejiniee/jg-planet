@@ -15,7 +15,7 @@
   gap: 5px;
   position: relative;
   width: calc(25% - 44px);
-  margin-top: 44px;
+  margin-top: 34px;
   margin-bottom: 56px;
 }
 
@@ -77,6 +77,13 @@
 .itempick {
   float: right;
   font-size: 13px;
+}
+
+.paginationBox{
+    display: block;
+    background-color: white;
+    border: none;
+    margin: 10px;
 }
 
 .pageBox {
