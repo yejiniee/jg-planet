@@ -3,6 +3,7 @@ import axios from "axios";
 import styles from "../styles/css/ItemList.module.css";
 import { ListItem } from "./ListItem";
 import { useParams } from "react-router";
+import Pagination from "./Pagination";
 
 //글자수 제한 함수
 const truncate = (str, n) => {
@@ -13,6 +14,7 @@ const Search = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const limit = 8; //페이지 당 최대 게시물 수
   const [page, setPage] = useState(1);
   const params = useParams();
   const fetchData = async () => {
@@ -56,24 +58,14 @@ const Search = () => {
           />
         ))}
       </div>
+
       <div className={styles.pageMove}>
-        <button
-          className={styles.pageBox}
-          onClick={() => {
-            setPage(page - 1);
-          }}
-        >
-          이전
-        </button>
-        {page}
-        <button
-          className={styles.pageBox}
-          onClick={() => {
-            setPage(page + 1);
-          }}
-        >
-          다음
-        </button>
+        <Pagination
+          total={data.length}
+          limit={limit}
+          page={page}
+          setPage={setPage}
+        />
       </div>
     </div>
   );
