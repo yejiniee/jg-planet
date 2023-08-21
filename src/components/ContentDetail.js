@@ -61,15 +61,31 @@ const ContentDetail = (props) => {
       userId: data?.seller,
       productName: data?.name,
       market: data?.market,
-      heartCheck: true,
+      heartCheck: 1, //??
       date: data?.updatedate,
     };
-    //console.log("data", productData);
+    /*
+    const productData={
+            "id": productId,
+                        "name": data?.name,
+                        "image": data?.image,
+                        "price": data?.price,
+                        "market": productMarket,
+                        "seller": data?.seller,
+                        "updatedate": data?.updatedate,
+                        "hearts": data?.hearts,
+                        "details": data?.details,
+                        "category": data?.category,
+                        "producturl": data?.producturl
+          };
+*/
+    console.log("data", productData);
     axios
-      .post(`/api/product/${productId}/${productMarket}/heart/add`, productData)
+      .get(`/api/product/${productId}/${productMarket}/heart/add`, productData)
       .then(function (response) {
-        console.log("성공", response);
+        console.log("추가 성공", response);
         setHeart(!heart);
+        alert("찜 성공");
         // response
       })
       .catch(function (error) {
@@ -85,10 +101,11 @@ const ContentDetail = (props) => {
   //찜 해제
   const deleteHeart = async () => {
     axios
-      .delete(`/api/product/${productId}/${productMarket}/heart/add`)
+      .get(`/api/product/${productId}/${productMarket}/heart/delete`)
       .then(function (response) {
-        console.log("성공", response);
+        console.log("삭제 성공", response);
         setHeart(!heart);
+        alert("찜 해제");
       })
       .catch(function (error) {
         // 오류발생시 실행
@@ -99,6 +116,7 @@ const ContentDetail = (props) => {
         console.log("데이터 요청 완료");
       });
   };
+
   /*
   const addHeart = async (e) => {
     setHeart(!heart);
@@ -135,7 +153,11 @@ const ContentDetail = (props) => {
         <div className={styles.views}>조회 20000</div>
         <div className={styles.heart}>찜 {data?.hearts}</div>
       </div>
-      <HeartButton heart={heart} onClick={addHeart}></HeartButton>
+      {heart ? (
+        <HeartButton heart={heart} onClick={deleteHeart}></HeartButton>
+      ) : (
+        <HeartButton heart={heart} onClick={addHeart}></HeartButton>
+      )}
 
       <div
         className={styles.btn_golink}
