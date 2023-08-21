@@ -51,6 +51,7 @@ export const ListItem = ({
       state: {
         id: id,
         market: market,
+        image: image,
       },
     });
   };
