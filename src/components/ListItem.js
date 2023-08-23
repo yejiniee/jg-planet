@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import HeartButtonMain from "./HeartButtonMain";
 import styles from "../styles/css/ItemList.module.css";
@@ -72,7 +72,6 @@ export const ListItem = ({
       market: market,
       heartCheck: 1,
     };
-    console.log("data", productData);
     axios
       .get(`/api/product/${productId}/${productMarket}/heart/add`, productData)
       .then(function (response) {
