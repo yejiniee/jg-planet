@@ -3,6 +3,7 @@ import axios from "axios";
 import styles from "../../styles/css/ItemList.module.css";
 import { ListItem } from "../ListItem";
 import Pagination from "../Pagination";
+import HeartButtonMain from "../HeartButtonMain";
 
 //글자수 제한 함수
 const truncate = (str, n) => {
@@ -19,15 +20,14 @@ const ItemList = ({ selectedCategoryId }) => {
   const [page, setPage] = useState(1); //현재 페이지 번호
   //const offset = (page - 1) * limit; //페이지 당 첫 게시물 위치
 
-  //흠
   const indexOfLast = page * limit;
   const indexOfFirst = (page - 1) * limit;
   const currentPosts = (data) => {
-      let currentPosts = 0;
-      currentPosts = data.slice(indexOfFirst, indexOfLast);
-      //console.log({"current post: ": currentPosts, "indexofFirst": indexOfFirst, "indexofLast": indexOfLast})
-      return currentPosts;
-    };
+    let currentPosts = 0;
+    currentPosts = data.slice(indexOfFirst, indexOfLast);
+    //console.log({"current post: ": currentPosts, "indexofFirst": indexOfFirst, "indexofLast": indexOfLast})
+    return currentPosts;
+  };
   //
 
   const fetchData = async () => {
@@ -77,8 +77,6 @@ const ItemList = ({ selectedCategoryId }) => {
   if (loading) return <div>로딩중..</div>;
   if (error) return <div>에러가 발생했습니다</div>;
   if (!data) return null;
-
-
 
   return (
     <div>
