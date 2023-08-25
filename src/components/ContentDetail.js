@@ -1,5 +1,5 @@
 import styles from "../styles/css/ContentDetail.module.css";
-import React, { useState, useEffect, useParams } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router";
 import HeartButton from "./HeartButton";
 import ImageSlide from "./ImageSlide"
@@ -15,9 +15,40 @@ const ContentDetail = (props) => {
   const productPrice = product.state.price;
 
   const [data, setData] = useState(null);
+  const [data2, setData2] = useState(null);
   const [heart, setHeart] = useState(false);
+  //const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [heartListId, setHeartListId] = useState([]); //하트 유지
 
-  const fetchData = async () => {
+  useEffect(() => {
+    axios
+      .all([
+        axios.get(`/api/product/${productId}/${productMarket}`, {}),
+        axios.get("/api/list", {}),
+      ])
+      .then(
+        axios.spread((res, res2) => {
+          const data = res.data;
+          const data2 = res2.data;
+          setData(data);
+          setData2(data2);
+
+          let isHeart = data2.some((x) => {
+            return x?.id === data?.id;
+          });
+          setHeart(isHeart);
+          //console.log("heart", isHeart);
+        })
+      )
+      .catch((e) => {
+        setError(e);
+        //console.log("에러...");
+      });
+  }, []);
+
+  //
+  /*const fetchData = async () => {
     setData(null);
     const response = await axios.get(
       `/api/product/${productId}/${productMarket}`
@@ -26,7 +57,7 @@ const ContentDetail = (props) => {
   };
   useEffect(() => {
     fetchData();
-  }, []);
+  }, []); */
 
   const renderLogo = () => {
     if (data?.market === "CARROT") {
