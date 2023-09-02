@@ -22,7 +22,7 @@ const Search = () => {
   /*
   한 페이지에 출력할 물건 개수 조절하려면 이부분 주석 해제하고
   62번쩨 줄에 currentPosts(data).map~으로 수정하면 돼요!!
-  일단 주석처리 해놨습니당..*/
+  일단 주석처리 해놨습니당..
   const indexOfLast = page * limit;
     const indexOfFirst = (page - 1) * limit;
     const currentPosts = (data) => {
@@ -30,7 +30,7 @@ const Search = () => {
         currentPosts = data.slice(indexOfFirst, indexOfLast);
         //console.log({"current post: ": currentPosts, "indexofFirst": indexOfFirst, "indexofLast": indexOfLast})
         return currentPosts;
-      };
+      }; */
 
   const fetchData = async () => {
     try {
@@ -54,13 +54,18 @@ const Search = () => {
     fetchData();
   }, [page]);
 
-  if (loading) return <div><Loading /></div>;
+  if (loading)
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
   if (error) return <div>에러가 발생했습니다</div>;
   if (!data) return null;
   return (
     <div>
       <div className={styles.itemlistcontent}>
-        {currentPosts(data).map((item) => (
+        {data.map((item) => (
           <ListItem
             className={styles.listItem}
             key={item.name}

@@ -13,23 +13,34 @@
 }
 
 .accordionTitle {
-padding: 5px;
+  padding: 5px;
 }
 
 .avatar {
-float: left;
-width: 20px;
-height: 20px;
-padding: 0px;
-background-color: transparent;
-/*border-radius: 20px;*/
+  float: left;
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  background-color: transparent;
+  /*border-radius: 20px;*/
 }
 
 .ctitleLabel {
-display: inline;
-margin-left: 10px;
-font-size: larger;
-font-weight: bolder;
+  display: inline;
+  margin-left: 10px;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.cdelete {
+  display: inline;
+  float: right;
+  margin-right: 10px;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transform: translateY(0px);
+  }
 }
 
 .categoryContent {
@@ -40,7 +51,7 @@ font-weight: bolder;
   height: 19px;
   position: relative;
   width: fit-content;
-  margin: 5px 10px;  /* 위아래, 좌우 */
+  margin: 5px 10px; /* 위아래, 좌우 */
 }
 
 /*
@@ -54,31 +65,36 @@ font-weight: bolder;
 }
 */
 ul {
-list-style: none;
-padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
-il{
-top: 5px;
-left: 5px;
+il {
+  top: 5px;
+  left: 5px;
 }
 #leftToRight li::after {
-position: absolute; 
-content:""; display: block; 
-border-bottom: 3px solid #5d1fc2; 
-transition: width 250ms ease-out; 
-left: auto; right: 0;  width: 0;
+  position: absolute;
+  content: "";
+  display: block;
+  border-bottom: 3px solid #5d1fc2;
+  transition: width 250ms ease-out;
+  left: auto;
+  right: 0;
+  width: 0;
 }
 #leftToRight li:hover::after {
-width: 100%; left: 0; right: auto;
+  width: 100%;
+  left: 0;
+  right: auto;
 }
 
 .contentBtn {
   background-color: transparent;
   border: none;
-  
+
   font-family: "Noto Sans CJK KR";
   font-size: 16px;
-  font-weight: bold;
+  font-width: bold;
   list-style: none;
 
   /* 여기서부터 css 코드 */
@@ -86,12 +102,10 @@ width: 100%; left: 0; right: auto;
   transition: 0.3s;
 }
 .contentBtn:hover {
-/*color: 텍스트 색깔*/
-letter-spacing: 3px;
-/*background: rgb(234, 235, 235);*/
+  /*color: 텍스트 색깔*/
+  letter-spacing: 3px;
+  /*background: rgb(234, 235, 235);*/
 }
-
-
 
 /* 아코디언 버튼 스타일 */
 
@@ -117,7 +131,7 @@ letter-spacing: 3px;
 /* 아코디언 콘텐츠 스타일 */
 .categorybox .accordionContent {
   display: flex;
-  flex : 2;
+  flex: 2;
   flex-wrap: wrap;
   align-content: space-around;
   background-color: transparent;
