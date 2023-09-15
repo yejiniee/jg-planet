@@ -63,7 +63,7 @@ export const ListItem = ({
       },
     });
   };
-  /*
+/*
   //찜하기-임시 삭제
   const [heart, setHeart] = useState(false);
   const addHeart = async () => {
@@ -134,6 +134,7 @@ export const ListItem = ({
         ) : (
           <HeartButtonMain heart={heart} onClick={addHeart}></HeartButtonMain>
         )*/}
+
       </div>
       <div className={styles.iteminfo}>
         {renderLogo()}

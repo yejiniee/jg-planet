@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-export const Pagination = ({
+export const Pagination=({
   postLength, // 아이템 배열의 길이
   oneViewNumber, // 한 페이지의 보여줄 Number
   page, // 현재페이지
@@ -22,6 +22,7 @@ export const Pagination = ({
   const [resultList, setResultList] = useState(middleList.slice(start, end));
 
   useEffect(() => {
+
     var fpage = page;
     var fInMaxPageListNumber = inMaxPageListNumber;
 
@@ -48,14 +49,14 @@ export const Pagination = ({
 
   return (
     <Nav>
-      <Button
-        onClick={() => {
-          setPage(1);
-        }}
-        disabled={page === 1}
-      >
-        <span>&lt;&lt;</span>
-      </Button>
+        <Button
+          onClick={() => {
+            setPage(1);
+          }}
+          disabled={page === 1}
+        >
+          <span>&lt;&lt;</span>
+        </Button>
       <Button
         onClick={() => {
           setPage(page - 1);
@@ -65,7 +66,7 @@ export const Pagination = ({
         <span>&lt;</span>
       </Button>
       {resultList.map((i) => (
-        <span key={i}>
+        <span key={i} >
           <Button
             key={i}
             onClick={() => {
@@ -77,25 +78,25 @@ export const Pagination = ({
           </Button>
         </span>
       ))}
-      <Button
-        onClick={() => {
-          setPage(page + 1);
-        }}
-        disabled={page === numPages}
-      >
-        <span>&gt;</span>
-      </Button>
-      <Button
-        onClick={() => {
-          setPage(numPages);
-        }}
-        disabled={page === numPages}
-      >
-        <span>&gt;&gt;</span>
-      </Button>
+        <Button
+          onClick={() => {
+            setPage(page + 1);
+          }}
+          disabled={page === numPages}
+        >
+          <span>&gt;</span>
+        </Button>
+        <Button
+          onClick={() => {
+            setPage(numPages);
+          }}
+          disabled={page === numPages}
+        >
+          <span>&gt;&gt;</span>
+        </Button>
     </Nav>
   );
-};
+}
 
 const Nav = styled.nav`
   display: flex;
